@@ -109,37 +109,38 @@ export default async function DayPage({ params }: PageProps) {
                 <MDXRemote 
                   source={day.content}
                   components={{
-                    pre: ({ children, ...props }: any) => {
-                      const code = children?.props?.children || '';
-                      const language = children?.props?.className?.replace('language-', '') || 'javascript';
+                    pre: ({ children }: { children: React.ReactNode }) => {
+                      const childElement = children as { props?: { children?: string; className?: string } };
+                      const code = childElement?.props?.children || '';
+                      const language = childElement?.props?.className?.replace('language-', '') || 'javascript';
                       return <CodeBlock language={language}>{code}</CodeBlock>;
                     },
-                    h1: ({ children }: any) => (
+                    h1: ({ children }: { children: React.ReactNode }) => (
                       <h1 className="text-3xl font-bold text-gray-900 dark:text-white mt-8 mb-4 first:mt-0">
                         {children}
                       </h1>
                     ),
-                    h2: ({ children }: any) => (
+                    h2: ({ children }: { children: React.ReactNode }) => (
                       <h2 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4 border-b border-gray-200 dark:border-gray-700 pb-2">
                         {children}
                       </h2>
                     ),
-                    h3: ({ children }: any) => (
+                    h3: ({ children }: { children: React.ReactNode }) => (
                       <h3 className="text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-3">
                         {children}
                       </h3>
                     ),
-                    p: ({ children }: any) => (
+                    p: ({ children }: { children: React.ReactNode }) => (
                       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
                         {children}
                       </p>
                     ),
-                    ul: ({ children }: any) => (
+                    ul: ({ children }: { children: React.ReactNode }) => (
                       <ul className="space-y-2 mb-6">
                         {children}
                       </ul>
                     ),
-                    li: ({ children }: any) => (
+                    li: ({ children }: { children: React.ReactNode }) => (
                       <li className="flex items-start gap-3 text-gray-700 dark:text-gray-300">
                         <span className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></span>
                         <span>{children}</span>

@@ -16,14 +16,14 @@ export default function IntroductionPage() {
           </h1>
           
           <p className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed max-w-3xl mx-auto">
-            You're about to embark on a transformative 90-day journey that will take you from a testing beginner to a skilled test automation architect. Let's set you up for success!
+            You&apos;re about to embark on a transformative 90-day journey that will take you from a testing beginner to a skilled test automation architect. Let&apos;s set you up for success!
           </p>
         </div>
 
         {/* What You'll Achieve */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
-            🎯 What You'll Achieve in 90 Days
+            🎯 What You&apos;ll Achieve in 90 Days
           </h2>
           
           <div className="grid md:grid-cols-2 gap-8">

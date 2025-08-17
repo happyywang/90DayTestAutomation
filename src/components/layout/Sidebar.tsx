@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import { useProgress } from '@/hooks/useProgress';
 
 interface SidebarProps {
@@ -56,7 +55,6 @@ const coursePhases = [
 ];
 
 export default function Sidebar({ isOpen, onClose }: SidebarProps) {
-  const pathname = usePathname();
   const [expandedPhase, setExpandedPhase] = React.useState<number | null>(null);
   const { getDayStatus, getPhaseProgress, isLoaded } = useProgress();
 

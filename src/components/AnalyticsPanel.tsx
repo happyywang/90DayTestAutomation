@@ -89,7 +89,7 @@ export default function AnalyticsPanel({ isOpen, onClose }: AnalyticsPanelProps)
                 📈 过去7天访问量
               </h3>
               <div className="space-y-3">
-                {dailyStats.map((day, index) => (
+                {dailyStats.map((day) => (
                   <div key={day.date} className="flex items-center justify-between">
                     <span className="text-sm text-gray-600 dark:text-gray-400">
                       {day.label}
@@ -118,11 +118,11 @@ export default function AnalyticsPanel({ isOpen, onClose }: AnalyticsPanelProps)
                 🔥 热门页面
               </h3>
               <div className="space-y-3">
-                {popularPages.length > 0 ? popularPages.map((page, index) => (
+                {popularPages.length > 0 ? popularPages.map((page, pageIndex) => (
                   <div key={page.path} className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
                       <span className="w-6 h-6 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 rounded-full flex items-center justify-center text-xs font-bold">
-                        {index + 1}
+                        {pageIndex + 1}
                       </span>
                       <span className="text-sm text-gray-700 dark:text-gray-300 truncate">
                         {page.path === '/' ? '首页' : page.path}
