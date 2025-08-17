@@ -14,7 +14,7 @@ export default function Home() {
             A system learning path from beginner to test architect
           </p>
           <Link 
-            href="/course/1"
+            href="/course/introduction"
             className="inline-flex items-center gap-3 px-12 py-6 bg-green-600 hover:bg-green-700 text-white text-xl font-semibold rounded-xl transition-all duration-200 hover:shadow-xl hover:scale-105 active:scale-95"
           >
             Start Your Journey
